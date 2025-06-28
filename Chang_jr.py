@@ -352,7 +352,6 @@ class Work(discord.ui.View):
             if selected_event == 0: 
                 arsenalembed = discord.Embed(title="❖ 工作結算：",description=f"• 你前往兵工廠協助武器製造，軍事<:INC:1375507210448277595>{amount}、商業<:INC:1375507210448277595>{amountt}。",color=discord.Color.red())
                 await  interaction.response.send_message(embed=arsenalembed,ephemeral=True)
-                ARG.minus_stamina(user_id)
             else:
                 events = Event('Arsenal',selected_event,user_id,amount,amountt)
                 embed = events[0]
